@@ -112,7 +112,7 @@ def creFigure(endStep, gridMax, folderPath):
             
             if ant[0] < math.ceil(gridMax+0.5) and ant[0] >= -math.ceil(gridMax+0.5) \
                 and ant[1] < math.ceil(ylength/2+0.5) and ant[1] >= -math.ceil(ylength/2+0.5):
-                fillCell[ant[0]+math.ceil(gridMax)+1][ant[1]+math.ceil(ylength/2)+1].set_color(c_list[int(ant[3])])
+                fillCell[ant[0]+math.ceil(gridMax)+1][ant[1]+math.ceil(ylength/2)+1].set_color(c_list[int(ant[3]+1)])
             else:
                 frameoutAntCount = frameoutAntCount + 1
             
@@ -189,7 +189,7 @@ def main():
     
     # User Setting
     colorNum = 2 + math.floor(random.random()*4)      # number of colors (more than or equal to 2)
-    antNum   = 2 + math.floor(random.random()*9)      # number of ants   (more than or equal to 1)
+    antNum   = 1 + math.floor(random.random()*9)      # number of ants   (more than or equal to 1)
     endStep  = 120*60*5
     
     # ant rotation list
@@ -247,7 +247,7 @@ def main():
 
 if __name__ == "__main__":
     
-    N_create = 2
+    N_create = 10
     
     cnt = 0
     while cnt < N_create:
